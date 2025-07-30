@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TicketBay Search</title>
+    <link
+      rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+      />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/resources/css/search.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row vertical-buffered search-bar rounded-bottom">
+        <div class="search-title">Ticket Search</div>
+        <select id="group" class="search-parameter">
+          <option selected disabled value="">Choose group</option>
+          <option value="osu-student">Student</option>
+          <option value="osu-faculty">Faculty</option>
+        </select>
+
+        <select id="game" class="search-parameter">
+          <option selected disabled value="">Choose game</option>
+        </select>
+
+        <select id="section" class="search-parameter">
+          <option selected disabled value="">Choose section</option>
+        </select>
+
+        <select id="row" class="search-parameter">
+          <option selected disabled value="">Choose row</option>
+        </select>
+        <input type="submit" value="Search" onclick="getTickets()" class="search-parameter"/>
+      </div>
+      <br/><br/>
+      <div class="container text-center" id="results">
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/resources/js/search.js"></script>
+
+  </body>
+</html>

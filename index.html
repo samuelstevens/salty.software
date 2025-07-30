@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salty Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Salty Software is a start-up created by a group of four undergrads at The Ohio State University. Salty Software strives to solve problems we ourselves face with robust, easy-to-use software"
+    />
+    <meta
+      name="keywords"
+      content="Salty Software, TicketBay, Ohio State, OSU, football, tickets, students"
+    />
+    <meta
+      name="google-site-verification"
+      content="GGmFMMGvu3AlP_ioPhaVwhJJw1bK7AKv4Jkgws2WEkg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/resources/css/site.css" />
+  </head>
+  <body onload="hideBadgeBasedOnPlatform()">
+    <script>
+      function detectPlatform() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/windows phone/i.test(userAgent)) {
+          return "WindowsPhone";
+        }
+
+        if (/android/i.test(userAgent)) {
+          return "Android";
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          return "iOS";
+        }
+
+        return "other";
+      }
+
+      function hideBadgeBasedOnPlatform() {
+        switch (detectPlatform()) {
+          case "iOS":
+            document.getElementById("google-play-badge").remove();
+            break;
+
+          case "Android":
+            document.getElementById("app-store-badge").remove();
+            break;
+
+          default:
+            break;
+        }
+      }
+    </script>
+
+    <div class="container-fluid">
+      <!-- Header -->
+      <header>
+        <div class="row top-buffer bottom-buffer">
+          <div class="col-md-1"></div>
+          <div class="col-sm-auto text-center">
+            <a href="/" class="header-link">Salty Software</a>
+          </div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/ticketbay" class="header-link">TicketBay</a>
+          </div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/news" class="header-link">News</a>
+          </div>
+          <div class="col-sm"></div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/about" class="header-link">About</a>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </header>
+      <main>
+        <div class="row top-buffer tint">
+          <div class="col-md-1"></div>
+          <div class="col-md">
+            <h1 class="profiles-title">Salty Software</h1>
+            <h2 class="profiles-title">
+              Software for students, designed by students.
+            </h2>
+          </div>
+        </div>
+        <div class="row top-buffer tint bottom-buffer">
+          <div class="col-md-2"></div>
+          <div class="col-6 col-md text-center">
+            <img
+              class="img-fluid profile-pic"
+              src="/resources/images/profiles/anmol.jpg"
+            />
+            <h4>Anmol</h4>
+          </div>
+          <div class="col-6 col-md text-center">
+            <img
+              class="img-fluid profile-pic"
+              src="/resources/images/profiles/jason.jpg"
+            />
+            <h4>Jason</h4>
+          </div>
+          <div class="col-6 col-md text-center">
+            <img
+              class="img-fluid profile-pic"
+              src="/resources/images/profiles/pranav.jpg"
+            />
+            <h4>Pranav</h4>
+          </div>
+          <div class="col-6 col-md text-center">
+            <a href="https://www.samuelstevens.me">
+              <img
+                class="img-fluid profile-pic"
+                src="/resources/images/profiles/sam.jpg"
+              />
+              <h4>Sam</h4>
+            </a>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-md-1"></div>
+          <div class="col"><h1>Our Apps</h1></div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-2 text-center bottom-buffer">
+            <a href="ticketbay">
+              <img
+                src="/resources/images/ticketbay/logo.png"
+                class="img-fluid app-icon"
+              />
+            </a>
+          </div>
+          <div class="col">
+            <a href="/ticketbay" class="text-decoration-none"
+              ><h2>TicketBay</h2></a
+            >
+            <p>
+              Find students to buy your football tickets effortlessly, then find
+              the best prices for the best sections. TicketBay makes finding
+              other students to buy and sell football tickets to painless.
+              Watching the Buckeyes has never been this easy.
+            </p>
+
+            <a
+              id="app-store-badge"
+              href="https://itunes.apple.com/us/app/ticketbay/id1420263679?mt=8"
+            >
+              <img
+                alt="Get it on the App Store"
+                src="/resources/images/app-store.png"
+                class="img-fluid market-badge"
+              />
+            </a>
+
+            <a
+              id="google-play-badge"
+              href="https://play.google.com/store/apps/details?id=com.saltysoftware.ticketbay"
+            >
+              <img
+                alt="Get it on Google Play"
+                src="/resources/images/app-store-google.png"
+                class="img-fluid market-badge"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </main>
+      <footer>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-md-auto">
+            <a href="mailto:support@salty.software" class="footer-link"
+              >Contact</a
+            >
+          </div>
+          <div class="col-md-auto">
+            <a href="/about" class="footer-link">About</a>
+          </div>
+          <div class="col-md">
+            <a href="/legal" class="footer-link">Privacy & Terms</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

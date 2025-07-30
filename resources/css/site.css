@@ -1,0 +1,227 @@
+:root {
+  --primary-color: rgb(70, 90, 99);
+  font-size: 18px;
+}
+
+html, body {
+  font-family: "Gill Sans", "Avenir Next", sans-serif;
+  color: #353839;
+  background-color: #F8F8F8;
+  background: url(/resources/images/backgrounds/paper.jpg) repeat;
+}
+
+main, footer, header {
+  max-width: 80ch;
+  margin: auto;
+  padding: 1em;
+}
+
+header, footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  text-align: center;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: #000000;
+}
+
+a:active {
+  color: #000000;
+}
+
+
+h1 {
+  font-weight: bold;
+  font-size: 3em;
+  color: var(--primary-color);
+  /* font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 1em;
+  margin-bottom: 0.5em; */
+}
+
+h2 {
+  /* font-size: 2em;
+  font-weight: 800;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em; */
+}
+
+h3 {
+  margin-top: 0.2em;
+  margin-bottom: 0.1em;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  margin-bottom: 0.5em;
+  margin-left: 1.5em;
+}
+
+li {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+
+.content {
+  background-color: white;
+  width: 100%;
+  padding-top: 4em;
+}
+
+label {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+input {
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0.2em;
+}
+
+button {
+  padding: 1em;
+  background-color: #465a63;
+  color: white;
+  font-size: 1.2em;
+  border: 0px;
+  margin-bottom: 2em;
+  border-radius: 12px;
+}
+
+.app-icon {
+  height: auto;
+  border-radius: 14%;
+}
+
+.market-badge {
+  max-height: 60px;
+  width: auto;
+}
+.tint {
+  background-color: #f8f8f8;
+}
+
+.secondary {
+  background-color: #bb0000;
+  color: #ffffff;
+}
+
+.top-buffer {
+  padding-top: 30px;
+}
+
+.bottom-buffer {
+  padding-bottom: 15px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel > * {
+  /* make sure the width is honored */
+  flex-shrink: 0;
+  padding: 1em;
+}
+
+.carousel img {
+  max-height: 400px;
+  width: auto;
+}
+
+
+
+/* Footer CSS */
+
+footer {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.footer-link {
+  font-size: 1.5em;
+}
+
+.footer-link:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title-page h1{
+  
+}
+
+/* Homepage CSS */
+
+#profile-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: .5rem;
+}
+
+@media screen and (min-width: 40em) {
+  #profile-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.profile-pic {
+  text-align: center;
+  padding: 1em;
+}
+
+.profile-pic > img {
+  border-radius: 50%;
+}
+
+
+
+/* TicketBay CSS */
+.stars {
+  color: orange;
+  font-size: 30px;
+}
+
+/*
+.row {
+  border: 1px solid red;
+}
+
+
+div[class*="col"] {
+  border: 1px solid blue;
+}
+*/

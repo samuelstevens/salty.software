@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TicketBay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="/ticketbay/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/site.css" />
+  </head>
+  <body onload="hideBadgeBasedOnPlatform()">
+    <script>
+      function detectPlatform() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/windows phone/i.test(userAgent)) {
+          return "WindowsPhone";
+        }
+
+        if (/android/i.test(userAgent)) {
+          return "Android";
+        }
+
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          return "iOS";
+        }
+
+        return "other";
+      }
+
+      function hideBadgeBasedOnPlatform() {
+        var appStoreBadge = document.getElementById("app-store-badge");
+        var googlePlayBadge = document.getElementById("google-play-badge");
+
+        switch (detectPlatform()) {
+          case "iOS":
+            document.getElementById("google-play-badge").remove();
+            break;
+
+          case "Android":
+            document.getElementById("app-store-badge").remove();
+            break;
+
+          default:
+            break;
+        }
+      }
+    </script>
+    <div class="container-fluid">
+      <!-- Header -->
+      <header>
+        <div class="row top-buffer bottom-buffer">
+          <div class="col-md-1"></div>
+          <div class="col-sm-auto text-center">
+            <a href="/" class="header-link">Salty Software</a>
+          </div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/ticketbay" class="header-link">TicketBay</a>
+          </div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/news" class="header-link">News</a>
+          </div>
+          <div class="col-sm"></div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/about" class="header-link">About</a>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </header>
+      <!-- Main content -->
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-sm d-flex">
+          <div class="align-self-center text-center text-sm-left">
+            <h1>TicketBay</h1>
+            <h2>Buying and selling football tickets has never been easier.</h2>
+            <a href="/ticketbay/transfer-guide"
+              >How to transfer electronic tickets</a
+            >
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <img
+            src="/resources/images/ticketbay/contact-screen-iphone-cropped.png"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <div class="row tint top-buffer">
+        <div class="col-md text-center"><h1>Download for free.</h1></div>
+      </div>
+      <div class="row tint bottom-buffer">
+        <div class="col-md text-center">
+          <a
+            id="app-store-badge"
+            href="https://itunes.apple.com/us/app/ticketbay/id1420263679?mt=8"
+          >
+            <img
+              alt="Get it on the App Store"
+              src="/resources/images/app-store.png"
+              class="img-fluid market-badge"
+            />
+          </a>
+          <a
+            id="google-play-badge"
+            href="https://play.google.com/store/apps/details?id=com.saltysoftware.ticketbay"
+          >
+            <img
+              alt="Get it on Google Play"
+              src="/resources/images/app-store-google.png"
+              class="img-fluid market-badge"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="row top-buffer">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <img
+            src="/resources/images/ticketbay/search-screen-2-iphone-cropped.png"
+            class="img-fluid d-none d-sm-block"
+          />
+          <img
+            src="/resources/images/ticketbay/search-screen-2-iphone.png"
+            class="img-fluid d-sm-none"
+          />
+        </div>
+        <div class="col-md d-flex">
+          <div class="align-self-center text-center text-sm-left top-buffer">
+            <h1>Buying tickets should be easy.</h1>
+            <h2>As easy as beating Michigan.</h2>
+
+            <p>
+              Buying tickets for Ohio State football from another student should
+              be painless. Facebook and GroupMe are not painless.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-1 order-12"></div>
+      </div>
+
+      <div class="row tint top-buffer">
+        <div class="col-md-1"></div>
+        <div class="col-md d-flex">
+          <div class="align-self-center text-center text-sm-left">
+            <h1>Become part of a tradition.</h1>
+            <p>
+              Even if you don't get a student package, with TicketBay, you can
+              still experience the greatest damn band in the land. And beat
+              ❌ichigan.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="/resources/images/ticketbay/search-screen-1-iphone-cropped.png"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <div class="row top-buffer">
+        <div class="col-md text-center">
+          <h1>See what students are saying.</h1>
+        </div>
+      </div>
+      <div class="row top-buffer bottom-buffer">
+        <div class="col-md-2"></div>
+        <div class="col-md text-center">
+          <span class="stars">★★★★★</span>
+          <h3>Worked perfectly.</h3>
+          <p>
+            Bought a ticket in less than 15 minutes and had it in my hands
+            within 8 hours. Great ability to filter for what you want.
+          </p>
+          <h6>By Anna Braam on Google Play</h6>
+          <br />
+
+          <span class="stars">★★★★★</span>
+          <h3>Useful, convenient app.</h3>
+          <p>
+            I saw this app mentioned on reddit and figured I’d give it a try.
+            Last year, I bought tickets on Facebook, and it was hard to keep
+            track of what was available and who I was contacting. Today, I
+            purchased three tickets for an upcoming game, and it was really easy
+            for me to see everything that was for sale, and for me to contact
+            the seller. This app works well, and I hope it continues to grow in
+            popularity. Go bucks!
+          </p>
+          <h6>By Lotionconspiracy on the App Store</h6>
+          <br />
+        </div>
+        <div class="col-md text-center">
+          <span class="stars">★★★★★</span>
+          <h3>Great app with even better developers</h3>
+          <p>
+            This app, although only out for a short time, has already helped me.
+            I have already been able to find tickets to the games I want to see
+            later in this fall. The developers were super helpful and responsive
+            when I had any questions. Thanks so much Salty Software!
+          </p>
+          <h6>By Deswagmiester on the App Store</h6>
+          <br />
+
+          <span class="stars">★★★★★</span>
+          <h3>Great App!</h3>
+          <p>
+            Very well designed app. I am finally able to find tickets that other
+            student are selling much easier than searching forums online. I can
+            take my brother to football games now!
+          </p>
+          <h6>By Lukedog21 on the App Store</h6>
+          <br />
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row top-buffer">
+        <div class="col-md text-center">
+          <a href="/ticketbay/transfer-guide"
+            ><h2>How to transfer electronic tickets</h2></a
+          >
+        </div>
+      </div>
+
+      <footer>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-md-auto">
+            <a href="mailto:support@salty.software" class="footer-link"
+              >Contact</a
+            >
+          </div>
+          <div class="col-md-auto">
+            <a href="/about" class="footer-link">About</a>
+          </div>
+          <div class="col-md">
+            <a href="/legal" class="footer-link">Privacy & Terms</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Download TicketBay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Salty Software is a start-up created by a group of four undergrads at The Ohio State University. Salty Software strives to solve problems we ourselves face with robust, easy-to-use software"
+    />
+    <meta
+      name="keywords"
+      content="Salty Software, TicketBay, Ohio State, OSU, football, tickets, students"
+    />
+    <meta
+      name="google-site-verification"
+      content="GGmFMMGvu3AlP_ioPhaVwhJJw1bK7AKv4Jkgws2WEkg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/resources/css/site.css" />
+  </head>
+  <body>
+    <script>
+      switch (navigator.platform) {
+        case "iPhone":
+        case "iPod":
+        case "iPad":
+          window.location.href =
+            "https://itunes.apple.com/us/app/ticketbay/id1420263679?mt=8";
+          break;
+        default:
+          var width =
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth;
+          if (width > 800) {
+            window.location.href = "https://salty.software/ticketbay";
+          } else {
+            window.location.href =
+              "https://play.google.com/store/apps/details?id=com.saltysoftware.ticketbay";
+          }
+          break;
+      }
+    </script>
+
+    <div class="container-fluid">
+      <!-- Header -->
+      <header>
+        <div class="row top-buffer bottom-buffer">
+          <div class="col-md-1"></div>
+          <div class="col-sm-auto text-center">
+            <a href="/" class="header-link">Salty Software</a>
+          </div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/ticketbay" class="header-link">TicketBay</a>
+          </div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/news" class="header-link">News</a>
+          </div>
+          <div class="col-sm"></div>
+          <div class="col-sm-auto text-center d-none d-sm-block">
+            <a href="/about" class="header-link">About</a>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </header>
+      <main>
+        <div class="row top-buffer">
+          <div class="col-md text-center"><h1>TicketBay</h1></div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-md text-center">
+            <p>Redirecting...</p>
+            <p>
+              If you aren't redirected automatically, click
+              <a href="/ticketbay">here</a>.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
