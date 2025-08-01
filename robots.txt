@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.salty.software/sitemap.xml
+Host: https://www.salty.software
