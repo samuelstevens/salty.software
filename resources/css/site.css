@@ -17,70 +17,69 @@ a:active {
   color: #000000;
 }
 
-
 h1 {
   font-weight: bold;
-  /* font-size: 1.5em;
+  /* font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 1em;
-  margin-bottom: 0.5em; */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem; */
 }
 
 h2 {
-  /* font-size: 2em;
+  /* font-size: 2rem;
   font-weight: 800;
-  margin-top: 0.5em;
-  margin-bottom: 0.2em; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem; */
 }
 
 h3 {
-  margin-top: 0.2em;
-  margin-bottom: 0.1em;
+  margin-top: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 
 p {
-  font-size: 1.2em;
-  line-height: 1.6em;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   font-weight: 300;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 ul {
-  margin-bottom: 0.5em;
-  margin-left: 1.5em;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
 }
 
 li {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 .content {
   background-color: white;
   width: 100%;
-  padding-top: 4em;
+  padding-top: 4rem;
 }
 
 label {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
 }
 
 input {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
-  padding: 0.2em;
+  padding: 0.2rem;
 }
 
 button {
-  padding: 1em;
+  padding: 1rem;
   background-color: #465a63;
   color: white;
-  font-size: 1.2em;
-  border: 0px;
-  margin-bottom: 2em;
-  border-radius: 12px;
+  font-size: 1.2rem;
+  border: 0rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
 }
 
 .app-icon {
@@ -89,7 +88,7 @@ button {
 }
 
 .market-badge {
-  max-height: 80px;
+  max-height: 5rem;
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
@@ -104,17 +103,17 @@ button {
 }
 
 .top-buffer {
-  padding-top: 30px;
+  padding-top: 1.875rem;
 }
 
 .bottom-buffer {
-  padding-bottom: 15px;
+  padding-bottom: 0.9375rem;
 }
 
 /* Header CSS */
 
 .header-link {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .header-link:hover {
@@ -129,7 +128,7 @@ footer {
 }
 
 .footer-link {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .footer-link:hover {
@@ -146,16 +145,5 @@ footer {
 /* TicketBay CSS */
 .stars {
   color: orange;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
-
-/*
-.row {
-  border: 1px solid red;
-}
-
-
-div[class*="col"] {
-  border: 1px solid blue;
-}
-*/
