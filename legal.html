@@ -51,7 +51,14 @@
         </div>
       </header>
       <main>
-        <div class="row">
+        <div class="row top-buffer">
+          <div class="col-md-1"></div>
+          <div class="col-md">
+            <p id="last-modified">Last Modified: 8/1/2025, 12:00:00 AM</p>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+        <div class="row top-buffer">
           <div class="col-md-1"></div>
           <div class="col-md">
             <h1 id="terms-of-service">Terms of Service</h1>
@@ -867,5 +874,14 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      const lastModified = new Date(1754020800000).toLocaleString("en-US", {
+        timeZone: "America/New_York",
+      });
+      document.getElementById(
+        "last-modified"
+      ).textContent = `Last Modified: ${lastModified}`;
+    </script>
   </body>
 </html>
