@@ -1,9 +1,17 @@
 {
   "success": true,
   "versionHealthChecks": {
+    "4.0.0": {
+      "version": "4.0.0",
+      "active": false,
+      "underConstruction": true,
+      "underConstructionUntil": 1755176400000
+    },
     "3.3.0": {
       "version": "3.3.0",
-      "active": true
+      "active": false,
+      "deprecated": true,
+      "deprecatedUpgradeTo": "4.0.0"
     },
     "3.2.0": {
       "version": "3.2.0",
