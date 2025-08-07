@@ -3,9 +3,7 @@
   "versionHealthChecks": {
     "3.3.0": {
       "version": "3.3.0",
-      "active": false,
-      "deprecated": true,
-      "deprecatedUpgradeTo": "4.0.0"
+      "active": true
     },
     "3.2.0": {
       "version": "3.2.0",
