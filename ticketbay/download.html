@@ -30,26 +30,66 @@
   </head>
   <body>
     <script>
-      switch (navigator.platform) {
-        case "iPhone":
-        case "iPod":
-        case "iPad":
-          window.location.href =
-            "https://itunes.apple.com/us/app/ticketbay/id1420263679?mt=8";
-          break;
-        default:
-          var width =
-            window.innerWidth ||
-            document.documentElement.clientWidth ||
-            document.body.clientWidth;
-          if (width > 800) {
-            window.location.href = "https://salty.software/ticketbay";
-          } else {
-            window.location.href =
-              "https://play.google.com/store/apps/details?id=com.saltysoftware.ticketbay";
-          }
-          break;
-      }
+      (function redirectUser() {
+        var appstore = "https://itunes.apple.com/us/app/ticketbay/id1420263679";
+        var playstore =
+          "https://play.google.com/store/apps/details?id=com.saltysoftware.ticketbay";
+        var fallback = "https://salty.software/ticketbay";
+
+        if (typeof window === "undefined" || typeof navigator === "undefined") {
+          window.location.href = fallback;
+          return;
+        }
+
+        var ua = navigator.userAgent || "";
+        if (
+          /bot|crawl|spider|slurp|facebookexternalhit|WhatsApp|Telegram|Discord/i.test(
+            ua
+          )
+        ) {
+          window.location.href = fallback;
+          return;
+        }
+
+        var platform =
+          (navigator.userAgentData && navigator.userAgentData.platform) ||
+          navigator.platform ||
+          "";
+        var isIPadOS13Plus =
+          platform === "MacIntel" && navigator.maxTouchPoints > 1;
+        var isIOS =
+          /iPad|iPhone|iPod/.test(platform) ||
+          /iPad|iPhone|iPod/.test(ua) ||
+          isIPadOS13Plus;
+        var isAndroid = /Android/i.test(ua) || /Android/i.test(platform);
+        var isMac = /Mac/i.test(platform) && !isIPadOS13Plus;
+        var isWindows = /Win/i.test(platform);
+        var isLinux = /Linux/i.test(platform) && !isAndroid;
+
+        if (isIOS || isMac) {
+          location.replace(appstore);
+          return;
+        }
+        if (isAndroid) {
+          location.replace(playstore);
+          return;
+        }
+        if (isWindows || isLinux) {
+          location.replace(fallback);
+          return;
+        }
+
+        var width = Math.max(
+          document.documentElement.clientWidth || 0,
+          window.innerWidth || 0
+        );
+        if (width <= 800) {
+          location.replace(appstore);
+          return;
+        }
+
+        location.replace(fallback);
+      })();
     </script>
 
     <div class="container-fluid">
