@@ -1,6 +1,10 @@
 {
   "success": true,
   "versionHealthChecks": {
+    "4.2.0": {
+      "version": "4.2.0",
+      "active": true
+    },
     "4.1.0": {
       "version": "4.1.0",
       "active": true
