@@ -11,9 +11,7 @@
     },
     "4.2.0": {
       "version": "4.2.0",
-      "active": false,
-      "offSeason": true,
-      "offSeasonUntil": 1788397200000
+      "active": true
     },
     "4.1.0": {
       "version": "4.1.0",
